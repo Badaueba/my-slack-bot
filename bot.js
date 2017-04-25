@@ -80,6 +80,9 @@ class Bot {
         
         return members;
     }
+    setTypingIndicator(channel) {
+        this.slack.send({ type : 'typing', channel : channel.id });
+    }
 }
 
 module.exports = Bot;
